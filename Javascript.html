@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbesyoDesignJavascript</title>
+
+    <!-- adobefont -->
+    <link rel="stylesheet" href="https://use.typekit.net/hxb5crj.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ezd6aof",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- adobefontここまで -->
+    <!-- 動く文字 -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@auroratide/typewritten-text/lib/style.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@auroratide/typewritten-text/lib/define.js"
+    ></script>
+    <!-- 動く文字ここまで -->
+
+    <!-- fontAwesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+    
+    <!-- css & favicon -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+  <body>
+
+      <div id="container">
+
+    <div class="container">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header-utilities">
+            <a class="header-utilities__logo" href="index.html"
+              ><img src="images/top.png" alt="ロゴ"
+            /></a>
+            <a class="btn" href="contact.html">Contact</a>
+          </div>
+          <!-- /.header-utilities -->
+          <nav>
+            <ul class="header-nav react" id="page-link">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-1">JavaScriptとは</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-2">const/let
+                </a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-3">関数</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-4">オブジェクト</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-5">配列</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-6">分割代入</a>
+              </li>
+            </ul>
+            <ul class="header-nav" id="page-link">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-7">...演算子</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-8">テンプレートリテラル</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-9">オブジェクトリテラル</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-10">class</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-11">Scope</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#area-12">便利メソッド７選</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /.header__inner -->
+      </header>
+
+      <div class="jumbotron" style="background-image: url('/images/background3.jpg');">
+        <div class="jumbotron__inner">
+          <p class="jumbotron__title">
+            <typewritten-text repeat>
+              Javascriptの基本12選</typewritten-text
+            >
+
+            <!-- <br class="only-lg" />
+            <typewritten-text repeat>プログラミングやデザインを解説します。</typewritten-text> -->
+          </p>
+          <div class="scrolldown1"><span>Scroll</span></div>
+        </div>
+      </div>
+      <!-- /.jumbotron__inner -->
+
+      <!-- /.jumbotron -->
+      <section id="area-1">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="Futura"
+            src="/images/Font/futura.jpg"
+          />
+        </figure>
+        
+        
+        <div class="half-media__body">
+          <p class="half-media__text">
+            Futura（フツラ・フーツラ）のデザインは、
+            ほぼ完全な円、三角形、四角形をベースにした単に幾何学的に構成されたサンセリフ体ではなく、驚くほどに練られた視覚的配慮がある定番フォントです。<br>
+            1923年にドイツのバウハウス（書籍印刷学校）で非常勤講師をしていたパウル・レンナー 
+            (Paul Renner、1878年 - 1956年) によって発表されたジオメトリック・サンセリフに分類されるサンセリフのローマ字書体です。<br>
+            レンナーは幾何学形態を用いて、新しい「時代精神」基づいた合理的な書体設計を行いました。Futuraとはラテン語で「未来」(英語の"future"に相当)の意味です。
+          </p>
+         
+          
+        </div>
+        
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        Futura使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：supream" src="images/Font/supream.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              シュプリーム（英語: Supreme）は、アメリカ合衆国のスケートボードショップおよびファッションブランド。ニューヨークで1994年に創業し
+              、スケートボード文化やヒップホップに影響を受けたアイテムで知られる。アメリカ国内ではブルックリン、ロサンゼルスにも店舗を展開している。
+            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：Louis Vuitton" src="images/Font/Louis Vuitton.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ルイ・ヴィトン（仏: Louis Vuitton Malletier）は、フランスのマルティエ（スーツケース職人）であるルイ・ヴィトン（Louis Vuitton
+              、1821年8月4日 - 1892年2月27日）が創始したファッションブランド。LVMH（モエ・ヘネシー・モギビッシュルイ・ヴィトン）グループの中核ブランドである。LVMHの2008年の売上高は239億ドル。
+              服飾部門における2014年現在のデザイナーはニコラ・ジェスキエール。またメンズコレクションについてはヴァージル・アブローがチーフディレクター。LVJが誕生した。
+            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：Volkswagenwerk" src="images/Font/volkswagen.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              フォルクスワーゲングループとはドイツの自動車開発、製造、販売を行う会社グループ。その中心会社はフォルクスワーゲンで、傘下の会社群と合わせフォルクスワーゲングループと称される。
+               フォルクスワーゲンが国民車製造株式会社（Volkswagenwerk GmbH ）から商号変更した1985年7月4日以降、フォルクスワーゲン工場（Volkswagenwerk）を想起させる以前の名前から、
+             よりグローバル化した多様性を反映する名前とするため、特にドイツ語圏以外の市場においてフォルクスワーゲングループという呼び方がなされるようになっている。
+            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+    
+      <!-- /.half-media -->
+      <section id="area-2">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="Helvetica"
+            src="/images/Font/GillSans.jpg"
+          />
+        </figure>
+        <div class="half-media__body">
+          <p class="half-media__text">
+            Gill Sans（ギル・サン）は、エリック・ギル (Eric Gill) が1926年から1930年にかけて制作したヒューマニストサンセリフ体の欧文書体である。ギルは名高い彫刻家、グラフィックアーティスト、そして書体デザイナーであった。Gill Sansのタイプフェイスは、かつて彼が師事していたエドワード・ジョンストン (Edward Johnston) がロンドン地下鉄のためにつくった書体Johnston（英語版）に着想を得ている。ギルは究極の可読性を持つサンセリフの制作を試み、Gill Sansは見出し・本文ともに適するように作られた。
+
+            Gill SansはBBCが制定書体に定めているほか、AMD、フィリップス、ウィキメディア財団およびウィキメディア・コモンズなどが使用している。スロベニアのユーロ硬貨のデザイン、三菱電機製エレベータ操作盤にも使われた。          </p>
+          
+        </div>
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        GillSans使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：supream" src="images/Font/ROLLSROYCE.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ロールス・ロイス（英: Rolls-Royce）の起源は、1906年3月にイギリスで設立された製造業者であるロールス・ロイス社 (Rolls-Royce Limited) であるが、現在は相互に独立した以下の二社となっている。
+
+              1973年に設立され、航空機エンジンや船舶・エネルギー関連機械などを製造・販売しているイギリスの工業メーカー、ロールス・ロイス（→ ロールス・ロイス・ホールディングス）
+              ドイツの自動車会社BMWが1998年に設立し、「ロールス・ロイス」ブランドの乗用車を製造・販売している自動車会社（→ ロールス・ロイス・モーター・カーズ）            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：SNSアイコンが写っている画面" src="images/Font/Philips.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              フィリップス (Koninklijke Philips N.V. 、英文正式表記：Royal Philips 、Euronext: PHIA , NYSE: PHG)は、ヘルスケア製品・医療関連機器を中心とする電気機器関連機器メーカーで、オランダのアムステルダムに本拠を置く多国籍企業である。
+
+              日本法人である株式会社フィリップス・ ジャパンは、東京都港区港南に所在。（日本法人については、2017年10月に株式会社フィリップスエレクトロニクスジャパンから株式会社フィリップス・ジャパンに社名を変更した。）            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：解析レポート" src="images/Font/bentley.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ベントレー（Bentley ）は、イギリスの高級車・スポーツカーメーカー、香水ブランドである。
+
+              1998年以降はドイツ・フォルクスワーゲングループ傘下となり、同グループのフォルクスワーゲン部門に属する。
+              
+              名称は創業者のウォルター・オーウェン・ベントレー（以降W.O.）にちなむ。            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+      <!-- /.half-media -->
+      <section id="area-3">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="Bodoni"
+            src="/images/Font/bodoni.jpg"
+          />
+        </figure>
+        <div class="half-media__body">
+          <p class="half-media__text">
+            ボドニ は、イタリアの印刷工、ジャンバッティスタ・ボドニ によってデザインされたラテン文字のセリフ体書体。<br>
+            モダン・フェイスに分類される。 画の太さを均一に保つなど、幾何学的に構成されており、カリグラフィ的要素を排除しているのが特徴。広告デザインなどに人気が高い書体の一つである。
+          </p>
+          
+        </div>
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        Bodoni使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：VOGUE" src="images/Font/VOGUE.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              VOGUE（ヴォーグ）とは、コンデナスト・パブリケーションズが発行するファッション・ライフスタイル雑誌である。主に女性向けとされ、ファッション、ライフスタイル、デザインなどのテーマに関する記事を掲載している。
+
+              アメリカを本国とし、世界18カ国とラテンアメリカで出版されている。日本ではVOGUE JAPAN（ヴォーグ・ジャパン）と称し、毎月28日に発売される。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：SNSアイコンが写っている画面" src="images/Font/nirvana.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ニルヴァーナ（英: Nirvana）は、アメリカ合衆国出身のロックバンド。1987年にワシントン州アバディーンで結成され、1989年にアルバム『ブリーチ』でデビュー。1991年に発表した2ndアルバム『ネヴァーマインド』の驚異的な大ヒットにより、世界的なグランジ・ムーヴメントを捲き起こした。1994年にカート・コバーンの自殺によりバンドは解散。
+
+              バンド名は、仏教用語の「涅槃の境地」に由来する。
+              
+              全世界のトータルセールスは、約7500万枚以上。1996年『グラミー賞』受賞。2004年にローリング・ストーンが発表した「ローリング・ストーン誌の選ぶ歴史上最も偉大な100組のアーティスト」の1組となっており、2014年にロックの殿堂入りを果たした。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：解析レポート" src="images/Font/ladygaga.png">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              レディー・ガガ（英: Lady Gaga）の名で知られるアメリカ合衆国のシンガーソングライター、音楽プロデューサー、女優、実業家、活動家。オーストラリア・シドニー名誉市民[5]。
+
+              革新的なダンス音楽と、並外れた歌唱力、そして独特のファッションやパフォーマンスの数々で世界的な人気を博し、史上最も売れたアーティストの一人となった。2010年代に入ってからは女優としても大きな成功を収めている。
+              
+              またジェンダー差別やいじめの撲滅に向けた運動を展開するなど、活発に社会貢献活動を行っている。            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+      <!-- /.half-media -->
+      <section id="area-4">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="background4"
+            src="/images/Font/trajan.jpg"
+          />
+        </figure>
+        <div class="half-media__body">
+          <p class="half-media__text">
+            Trajanは、1989年にCarolTwomblyによってAdobe用に設計されたセリフ 書体です。<br>
+肉なことに、書体はラテン語の植字には不十分です。
+          </p>
+          
+        </div>
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        Trajan使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：supream" src="images/Font/godiva.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ゴディバ（Godiva Chocolatier, ゴディバケル・グループの傘下にあり、アメリカ合衆国・ヨーロッパ・アジアにおいて、チョコレートや関連商品の販売を行っている。チョコレートの高級ブランドとして世界的に有名である。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：SNSアイコンが写っている画面" src="images/Font/taitanic.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              『タイタャーズが北米で、20世紀フォックスがその他の地域で配給した。製作費は2億ドルと、当時の映画界で最も高額な作品となった。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：解析レポート" src="images/Font/starwars.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              「スター・ウカー・サーガ」としてシリーズの柱となっている。            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+      <!-- /.half-media -->
+      <section id="area-5">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="background5"
+            src="/images/Font/din.jpg"
+          />
+        </figure>
+        <div class="half-media__body">
+          <p class="half-media__text">
+            FF D年9月の時点で、それはMyFontsで最も売れている書体のままでした。
+          </p>
+          
+        </div>
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        DIN使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：supream" src="images/Font/uniqlo.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              株式会社ユニクロ（英: UNIQLO CO., LTD.）は、「UNIQLO（ユニクロ）」のまた東京都江東区有明1丁目6-7の「UNIQLO CITY TOKYO」6階に有明本部を置いている。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：SNSアイコンが写っている画面" src="images/Font/tokyo2020.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              東京2020オリンピック競技大会（とうきょうニーゼロニーゼロオリンピックきょうぎたいかい、TOKYO 2020）は、2021年（令和3年）7月23日から8月8日までの17日間、日本の東京都で開催された第32回オリンピック競技大会。
+
+              205の国と地域[注釈 2]から約11,000人が参加し、実質19日間（開会式に先立ち男女サッカーとソフトボールの一部試合が行われた2日間を含む）に33競技339種目が行われた。一般的には東京オリンピックや東京2020オリンピックと呼称され、東京五輪（とうきょうごりん）、TOKYO 2020などとも略称される。また、公用文では第三十二回オリンピック競技大会の表記も用いられている。          </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：解析レポート" src="images/Font/tokyometro.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              東京地下鉄株式会社（とうきょうちかてつ、英: Tokyo Metro Co., Ltd.）は、東京地下鉄株式会社法に基づき、東京都区部およびその周辺地域（埼玉県と千葉県の一部）で地下鉄を経営する、日本の特殊会社たる鉄道事業者である[注釈 1]。愛称は東京メトロ（とうきょうメトロ）。日本の大手私鉄の一つである。
+
+              東京の地下鉄路線のうち、銀座線を始めとする帝都高速度交通営団（営団地下鉄）から承継した8路線と、東京地下鉄発足後に開業した副都心線1路線の合わせて9路線を運営している。            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+      <!-- /.half-media -->
+      <section id="area-6">
+      <div class="half-media">
+        <figure class="half-media__img-wrapper">
+          <img
+            class="half-media__img"
+            alt="background6"
+            src="/images/Font/Garamond.jpg"
+          />
+        </figure>
+        <div class="half-media__body">
+          <p class="half-media__text">
+            Garamond（ギ
+            現在でも多くの人に利用され、コンピュータ・フォントにもさまざまなバリエーションのGaramondが存在する。かつてAppleはApple Garamondを、AdobeはAdobe Garamondをコーポレートフォントとして採用していた（両社ともMyriadへの変更を経て、現在AdobeはAdobe Clean、AppleはSan Franciscoを使用する）。          </p>
+       
+        </div>
+        <!-- /.half-media__body -->
+      </div>
+      <h3 class="level3-heading">
+        Garamond使用例
+      </h3>
+      <div class="cards cards--col3">
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：supream" src="images/Font/applecomputer.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              1（ジョブズとウォズニアックはそれぞれ45パーセントの株式を所持した）。ウェインはApple社の最初の製品であるApple Iのマニュアルを作成したほか、
+              リンゴの木とアイザック・ニュートンが描かれた最初期のロゴマークをデザインした。1977年、スティーブ・ジョブズからの依頼により、ロブ・ジャノフ（英語版）が欠けたリンゴのロゴマークをデザインした。
+
+            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：SNSアイコンが写っている画面" src="images/Font/L'OCCITANE.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              ロクシタン（L'Occitane）は、南フランス発の化粧品メーカーである。現在、ロクシタン・グループはルクセンブルクに本社機能を置く。南フランスプロヴァンス地方におけるライフスタイルを取り入れた自然派（オーガニックコスメ）のコスメティックブランドとして、1976年にオリビエ・ボーサンによって創業された。
+            
+
+              その名は南仏を中心とした中世の言語圏オクシタニア（Occitània）の女性という意味がある。            </p>
+          </div>
+          <!-- /.card__body -->
+        </div>
+        <!-- /.cards__item card -->
+        <div class="cards__item card">
+          <figure class="card__img-wrapper">
+            <img class="card__img" alt="写真：解析レポート" src="images/Font/abercrombie&fitch.jpg">
+          </figure>
+          <div class="card__body">
+            <p class="card__text">
+              アバクロンビー&フィッチ（Abercrombie & Fitch 、A&F）は、
+
+              カジュアルファッションブランド。
+              1の製品の製造・販売を行う企業(1のブランド以外も展開している)。
+              本社は、アメリカ合衆国オハイオ州ニューオールバニ。日本での通称はアバクロ。ロゴマークはヘラジカ。俳優や歌手などの有名人が愛用することでも有名。店員に白人男性を優遇するなど、物議を醸したこともあった。            </p>
+          </div>
+          <!-- /.card__body -->
+    </section>
+      <!-- /.half-media -->
+
+ 
+ 
+      <!-- /.horizontal-table -->
+      
+      <!-- sns -->
+      <div class="sns">
+        <a href="https://github.com/abesyoo"><i class="fab fa-github-square fa-4x faa-wrench animated-hover "></i></a>
+        <a href="https://twitter.com/@abesyoo"><i class="fab fa-twitter fa-4x faa-wrench animated-hover"></i></i></a>
+        <a href="#"><i class="fas fa-blog fa-4x faa-wrench animated-hover"></i></i></i></a>
+      </div>
+      <!-- 画面の上に戻る -->
+      <p id="page-top"><a href="#">Page Top</a></p>
+          <!-- フッター -->
+          <footer>
+            <div class="footer">
+              <div class="footer__inner">
+                <nav>
+                  <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="html5.html">HTML5</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="css3.html">CSS3</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="Javascript.html">JavaScript</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="react.html">React</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="photoshop.html">PhotoShop</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="footer-nav__item">
+                      <a class="footer-nav__link" href="font.html">Font</a>
+                      <ul class="footer-child-nav">
+                        <!-- <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li>
+                        <li class="footer-child-nav__item">
+                          <a class="footer-child-nav__link" href="#">未定</a>
+                        </li> -->
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- /.footer__inner -->
+            </div>
+    
+            <!-- /.footer -->
+            <div class="footer footer--border-top-gray">
+              <div class="footer__inner">
+                <small class="footer-copyright">&copy 2021 abesyo.</small>
+              </div>
+              <!-- /.footer__inner -->
+            </div>
+            <!-- /.footer footer--border-top-gray -->
+          </footer>
+    </div>
+ 
+    <!-- /*======pageUp.js =======*/ -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/pageup.js"></script>
+
+    <!-- /*======pacejs =======*/ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<!--IE11用-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script><!--不必要なら削除-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script><!--不必要なら削除-->
+<script src="js/pace.js"></script>
+
+<!-- /*======ページ内の指定の場所にスクロール =======*/ -->
+<script src="js/jump.js"></script>
+</body>
+    
+  </body>
+</html>
+
+
